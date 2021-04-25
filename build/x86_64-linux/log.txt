@@ -1,12 +1,15 @@
 clang++ -DDLIB_LOG_DOMAIN="UGUI" -DDM_PLATFORM_LINUX -D__STDC_LIMIT_MACROS -DLUA_BYTECODE_ENABLE_64  -ffloat-store -g -O2 -D__STDC_LIMIT_MACROS -Wall -Werror=format -fno-exceptions -fPIC -fvisibility=hidden  -Iupload/myextension/include/ -Iupload/  -I/var/extender/sdk/ff5b94e432eb58dabdb8e367bed9acc5e99e129b/defoldsdk//include -I/var/extender/sdk/ff5b94e432eb58dabdb8e367bed9acc5e99e129b/defoldsdk//sdk/include -I/var/extender/sdk/ff5b94e432eb58dabdb8e367bed9acc5e99e129b/defoldsdk//include/x86_64-linux  upload/myextension/src/myextension.cpp -c -o build/myextension.cpp_0.o
 clang-10: warning: optimization flag '-ffloat-store' is not supported [-Wignored-optimization-argument]
-upload/myextension/src/myextension.cpp:25:25: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+upload/myextension/src/myextension.cpp:130:25: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
     UG_ConsolePutString("Beginning System Initialization...\n");
                         ^
-upload/myextension/src/myextension.cpp:27:25: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+upload/myextension/src/myextension.cpp:132:25: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
     UG_ConsolePutString("System Initialization Complete\n");
                         ^
-2 warnings generated.
+upload/myextension/src/myextension.cpp:143:14: warning: unused variable 'size' [-Wunused-variable]
+    uint32_t size = 0;
+             ^
+3 warnings generated.
 
 clang++ -DDLIB_LOG_DOMAIN="UGUI" -DDM_PLATFORM_LINUX -D__STDC_LIMIT_MACROS -DLUA_BYTECODE_ENABLE_64  -ffloat-store -g -O2 -D__STDC_LIMIT_MACROS -Wall -Werror=format -fno-exceptions -fPIC -fvisibility=hidden  -Iupload/myextension/include/ -Iupload/  -I/var/extender/sdk/ff5b94e432eb58dabdb8e367bed9acc5e99e129b/defoldsdk//include -I/var/extender/sdk/ff5b94e432eb58dabdb8e367bed9acc5e99e129b/defoldsdk//sdk/include -I/var/extender/sdk/ff5b94e432eb58dabdb8e367bed9acc5e99e129b/defoldsdk//include/x86_64-linux  upload/myextension/src/ugui.c -c -o build/ugui.c_1.o
 clang-10: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
@@ -61,10 +64,10 @@ upload/myextension/src/ugui.c:7171:15: warning: ISO C++11 does not allow convers
               ^
 8 warnings generated.
 
-llvm-ar rcs /tmp/job14998438734093205340/build/libUGUI_1.a build/myextension.cpp_0.o build/ugui.c_1.o 
+llvm-ar rcs /tmp/job7792287619945035657/build/libUGUI_1.a build/myextension.cpp_0.o build/ugui.c_1.o 
 
 clang++ -DDLIB_LOG_DOMAIN="ENGINE_MAIN" -DDM_PLATFORM_LINUX -D__STDC_LIMIT_MACROS -DLUA_BYTECODE_ENABLE_64  -ffloat-store -g -O2 -D__STDC_LIMIT_MACROS -Wall -Werror=format -fno-exceptions -fPIC -fvisibility=hidden   -I/var/extender/sdk/ff5b94e432eb58dabdb8e367bed9acc5e99e129b/defoldsdk//include -I/var/extender/sdk/ff5b94e432eb58dabdb8e367bed9acc5e99e129b/defoldsdk//sdk/include -I/var/extender/sdk/ff5b94e432eb58dabdb8e367bed9acc5e99e129b/defoldsdk//include/x86_64-linux  build/main.cpp -c -o build/main_tmp2.o
 clang-10: warning: optimization flag '-ffloat-store' is not supported [-Wignored-optimization-argument]
 
-clang++ build/main_tmp2.o  -o build/dmengine  -L/tmp/job14998438734093205340/build  -L/var/extender/sdk/ff5b94e432eb58dabdb8e367bed9acc5e99e129b/defoldsdk//lib/x86_64-linux -L/var/extender/sdk/ff5b94e432eb58dabdb8e367bed9acc5e99e129b/defoldsdk//ext/lib/x86_64-linux  -Wl,-Bstatic -Wl,--start-group -lengine -lengine_service -lmbedtls -lzip -lwebviewext -lprofilerext -lfacebookext -liapext -lpushext -liacext -lrecord -lgameobject -lddf -lresource -lgamesys -lgraphics -lgraphics_transcoder_uastc -lbasis_transcoder -lphysics -lBulletDynamics -lBulletCollision -lLinearMath -lBox2D -lrender -lscript -lluajit-5.1 -lextension -lhid -linput -lparticle -lrig -ldlib -ldmglfw -lgui -lcrashext -lliveupdate -lsound -ltremolo -lvpx -lcares   -lUGUI_1  -Wl,--end-group -Wl,-Bdynamic -Wl,-rpath=$ORIGIN,--enable-new-dtags  -lopenal -lXext -lX11 -lXi -lGL -lGLU -lpthread -lm -ldl 
+clang++ build/main_tmp2.o  -o build/dmengine  -L/tmp/job7792287619945035657/build  -L/var/extender/sdk/ff5b94e432eb58dabdb8e367bed9acc5e99e129b/defoldsdk//lib/x86_64-linux -L/var/extender/sdk/ff5b94e432eb58dabdb8e367bed9acc5e99e129b/defoldsdk//ext/lib/x86_64-linux  -Wl,-Bstatic -Wl,--start-group -lengine -lengine_service -lmbedtls -lzip -lwebviewext -lprofilerext -lfacebookext -liapext -lpushext -liacext -lrecord -lgameobject -lddf -lresource -lgamesys -lgraphics -lgraphics_transcoder_uastc -lbasis_transcoder -lphysics -lBulletDynamics -lBulletCollision -lLinearMath -lBox2D -lrender -lscript -lluajit-5.1 -lextension -lhid -linput -lparticle -lrig -ldlib -ldmglfw -lgui -lcrashext -lliveupdate -lsound -ltremolo -lvpx -lcares   -lUGUI_1  -Wl,--end-group -Wl,-Bdynamic -Wl,-rpath=$ORIGIN,--enable-new-dtags  -lopenal -lXext -lX11 -lXi -lGL -lGLU -lpthread -lm -ldl 
 

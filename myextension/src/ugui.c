@@ -4519,10 +4519,10 @@ __UG_FONT_DATA unsigned char font_32x53[256][212]={
    const UG_FONT FONT_7X12 = {(unsigned char*)font_7x12,FONT_TYPE_1BPP,7,12,0,255,NULL};
 #endif
 #ifdef USE_FONT_8X8
-   const UG_FONT FONT_8X8 = {(unsigned char*)font_8x8,FONT_TYPE_1BPP,8,8,0,255,NULL};
+   const UG_FONT FONT_8X8 = {(unsigned char*)font_8x8,FONT_TYPE_1BPP,8,8,0,255,(UG_U8*)NULL};
 #endif
 #ifdef USE_FONT_8X12
-   const UG_FONT FONT_8X12 = {(unsigned char*)font_8x12,FONT_TYPE_1BPP,8,12,0,255,NULL};
+const UG_FONT FONT_8X12 = {(unsigned char*)font_8x12,FONT_TYPE_1BPP,8,12,0,255,(UG_U8*)NULL};
 #endif
 #ifdef USE_FONT_8X12_CYRILLIC
    const UG_FONT FONT_8X12 = {(unsigned char*)font_8x12,FONT_TYPE_1BPP,8,12,0,255,NULL};
@@ -4537,16 +4537,16 @@ __UG_FONT_DATA unsigned char font_32x53[256][212]={
    const UG_FONT FONT_12X16 = {(unsigned char*)font_12x16,FONT_TYPE_1BPP,12,16,0,255,NULL};
 #endif
 #ifdef USE_FONT_12X20
-   const UG_FONT FONT_12X20 = {(unsigned char*)font_12x20,FONT_TYPE_1BPP,12,20,0,255,NULL};
+const UG_FONT FONT_12X20 = {(unsigned char*)font_12x20,FONT_TYPE_1BPP,12,20,0,255,(UG_U8*)NULL};
 #endif
 #ifdef USE_FONT_16X26
    const UG_FONT FONT_16X26 = {(unsigned char*)font_16x26,FONT_TYPE_1BPP,16,26,0,255,NULL};
 #endif
 #ifdef USE_FONT_22X36
-   const UG_FONT FONT_22X36 = {(unsigned char*)font_22x36,FONT_TYPE_1BPP,22,36,0,255,NULL};
+const UG_FONT FONT_22X36 = {(unsigned char*)font_22x36,FONT_TYPE_1BPP,22,36,0,255,(UG_U8*)NULL};
 #endif
 #ifdef USE_FONT_24X40
-   const UG_FONT FONT_24X40 = {(unsigned char*)font_24x40,FONT_TYPE_1BPP,24,40,0,255,NULL};
+const UG_FONT FONT_24X40 = {(unsigned char*)font_24x40,FONT_TYPE_1BPP,24,40,0,255,(UG_U8*)NULL};
 #endif
 #ifdef USE_FONT_32X53
    const UG_FONT FONT_32X53 = {(unsigned char*)font_32x53,FONT_TYPE_1BPP,32,53,0,255,NULL};
